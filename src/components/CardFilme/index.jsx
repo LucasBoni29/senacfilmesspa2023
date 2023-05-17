@@ -1,6 +1,7 @@
 import { useState } from "react"
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Link from "next/link";
 
 
 export default function CardFilme({filme}) {
@@ -18,7 +19,11 @@ export default function CardFilme({filme}) {
             </p>
             <img className="rounded-lg" src={poster} alt="poster do filme" />
             <h3 className="text-xl my-3 line-clamp-1">{filme.title}</h3>
-            <a className="bg-amber-500 text-black px-5 py-1 rounded" href="#">detalhes</a>
+            <Link 
+                className="bg-amber-500 text-black px-5 py-1 rounded" 
+                href={`/detalhes?id=${filme.id}`}>
+                    detalhes
+            </Link>
         </div>
     )
 }
