@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <>
-      <h1>Senac Filmes</h1>
+      <h1 className="text-4xl">Senac Filmes</h1>
 
       { filmes ?  
         <SecaoFilmes titulo="Filmes em alta" filmes={filmes} /> :
